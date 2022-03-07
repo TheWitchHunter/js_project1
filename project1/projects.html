@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    .center1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 500px;
+        width: 300px;
+        }
+        .center2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <img id="bulb" src="bulb_off.jpg" alt="" class="center1">
+    <button id="btn" class="center2">bulb on</button>
+    <script>
+        let btn=document.getElementById('btn');
+        let bulb=document.getElementById('bulb');
+        btn.addEventListener('click',bulbonoff);
+        function bulbonoff(){
+            if(btn.textContent.includes('bulb on')){
+            bulb.src="bulb_on.jpg"
+            btn.textContent="bulb off"
+        }
+        else{
+            bulb.src="bulb_off.jpg"
+            btn.textContent="bulb on"
+        }
+        }
+    </script>
+</body>
+</html>
